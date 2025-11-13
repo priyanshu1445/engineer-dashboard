@@ -89,7 +89,7 @@ const Topbar = ({ onToggleSidebar }) => {
                 Activity Log
               </Dropdown.Item>
               <Dropdown.Divider />
-              <Dropdown.Item href="/logout" className="text-danger">
+              <Dropdown.Item href="/admin" className="text-danger">
                 <LogOut size={16} className="me-2" />
                 Logout
               </Dropdown.Item>

@@ -43,10 +43,16 @@ const Sidebar = () => {
       <div className="p-3 border-bottom text-primary fw-bold fs-5">Engineer Panel</div>
 
       {/* ✅ Updated paths to match route config */}
-      <SidebarItem icon={Box} label="My Queue" path="/my-queue" />
-      <SidebarItem icon={QrCode} label="Scan / Enter Order" path="/scan-order" />
-      <SidebarItem icon={Wrench} label="Repair Workflow" path="/repair-workflow" />
-      <SidebarItem icon={Archive} label="History" path="/history" />
+      <SidebarItem icon={Box} label="All Products" path="/all-products" />
+      {/* <SidebarItem icon={Box} label="My Queue" path="/my-queue" /> */}
+      <SidebarItem icon={Box} label="Assigned Products" path="/assign-products" />
+      <SidebarItem icon={Box} label="Approve  Products" path="/approve-products" />
+      <SidebarItem icon={Box} label="Not Approve  Products" path="/not-approve-products" />
+      <SidebarItem icon={Box} label="Awaiting Quality Check Products" path="/awaiting-products" />
+      <SidebarItem icon={Box} label="Assigned Quality Check Products" path="/assign-quality-products" />
+      {/* <SidebarItem icon={QrCode} label="Scan / Enter Order" path="/scan-order" /> */}
+      {/* <SidebarItem icon={Wrench} label="Repair Workflow" path="/repair-workflow" /> */}
+      {/* <SidebarItem icon={Archive} label="History" path="/history" /> */}
 
       {/* Logout */}
       <div className="mt-4">

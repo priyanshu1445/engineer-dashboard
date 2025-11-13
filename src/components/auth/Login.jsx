@@ -17,7 +17,7 @@ const Login = () => {
     // Basic hardcoded validation — you can replace with API call
     if (form.email === 'admin@example.com' && form.password === 'admin123') {
       localStorage.setItem('token', 'admin-token');
-      navigate('/my-queue');
+      navigate('/all-products');
 
     } else {
       setError('Invalid email or password');

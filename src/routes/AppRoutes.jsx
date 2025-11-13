@@ -15,6 +15,12 @@ import Login from '../components/auth/Login';
 import PrivateRoute from '../routes/PrivateRoutes';
 import Repair from '../features/engineer/Repair';
 import History from '../features/engineer/History';
+import AllProducts from '../features/engineer/AllProducts';
+import AssignProducts from '../features/engineer/AssignProducts';
+import ApprovedProducts from '../features/engineer/ApprovedProducts';
+import AwaitingQualityCheck from '../features/engineer/AwaitingQualityCheck';
+import NotApproveProducts from '../features/engineer/NotApproveProducts';
+import AssignedQualityCheckProducts from '../features/engineer/AssignedQualityCheckProducts';
 const AppRoutes = () => {
   return (
     <Router>
@@ -24,8 +30,14 @@ const AppRoutes = () => {
 
         {/* Protected Routes */}
         <Route element={<PrivateRoute />}>
-          <Route element={<EngineerLayout />}>
-            <Route path="/my-queue" element={<MyQueue />} />
+          <Route element={<EngineerLayout />}>  
+            {/* <Route path="/my-queue" element={<MyQueue />} /> */}
+            <Route path="/all-products" element={<AllProducts />} />
+            <Route path="/assign-products" element={<AssignProducts />} />
+            <Route path="/approve-products" element={<ApprovedProducts />} />
+            <Route path="/not-approve-products" element={<NotApproveProducts />} />
+            <Route path="/awaiting-products" element={<AwaitingQualityCheck />} />
+            <Route path="/assign-quality-products" element={<AssignedQualityCheckProducts />} />
             <Route path="/scan-order" element={<ScanOrder />} />
             <Route path="/repair-workflow" element={<Repair />} />
             <Route path="/history" element={<History />} />
@@ -34,7 +46,7 @@ const AppRoutes = () => {
         </Route>
 
         {/* Fallback */}
-        <Route path="*" element={<Navigate to="/my-queue" />} />
+        <Route path="*" element={<Navigate to="/all-products" />} />
       </Routes>
     </Router>
   );
